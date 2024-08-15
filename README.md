@@ -1,1 +1,2 @@
-# conductor-oss-helm-charts
+# Conductor OSS Helm Chart
+Forked from Orkes
