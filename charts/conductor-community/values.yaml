@@ -25,15 +25,15 @@ conductor:
   externalPayloadStorage:
     type: postgres
   indexing:
-    enabled: true
+    enabled: "true"
     elasticsearch:
       url: http://es:9200
       indexName: conductor
       version: 7
       clusterHealthColor: yellow
   metricsPrometheus:
-    enabled: true
-  loadSample: true
+    enabled: "true"
+  loadSample: "true"
 
 spring:
   datasource:

@@ -20,34 +20,34 @@ spec:
     spec:
       containers:
         - env:
-          - name: spring.datasource.password
-            value: {{ .Values.spring.datasource.password | quote }}
-          - name: spring.datasource.username
-            value: {{ .Values.spring.datasource.username | quote }}
-          - name: spring.datasource.url
-            value: {{ .Values.spring.datasource.url | quote }}
-          - name: conductor.db.type
-            value: {{ .Values.conductor.db.type }}
-          - name: conductor.queue.type
-            value: {{ .Values.conductor.queue.type }}
-          - name: conductor.external-payload-storage.type
-            value: {{ .Values.conductor.externalPayloadStorage.type }}
-          - name: conductor.indexing.enabled
-            value: {{ .Values.conductor.indexing.enabled }}
-          - name: conductor.elasticsearch.url
-            value: {{ .Values.conductor.indexing.elasticsearch.url }}
-          - name: conductor.elasticsearch.indexName
-            value: {{ .Values.conductor.indexing.elasticsearch.indexName }}
-          - name: conductor.elasticsearch.version
-            value: {{ .Values.conductor.indexing.elasticsearch.version }}
-          - name: conductor.elasticsearch.clusterHealthColor
-            value: {{ .Values.conductor.indexing.elasticsearch.clusterHealthColor }}
-          - name: conductor.metrics-prometheus.enabled
-            value: {{ .Values.conductor.metricsPrometheus.enabled }}
-          - name: loadSample
-            value: {{ .Values.conductor.loadSample }}
-          - name: management.endpoints.web.exposure.include
-            value: prometheus
+            - name: spring.datasource.password
+              value: {{ .Values.spring.datasource.password | quote }}
+            - name: spring.datasource.username
+              value: {{ .Values.spring.datasource.username | quote }}
+            - name: spring.datasource.url
+              value: {{ .Values.spring.datasource.url | quote }}
+            - name: conductor.db.type
+              value: {{ .Values.conductor.db.type }}
+            - name: conductor.queue.type
+              value: {{ .Values.conductor.queue.type }}
+            - name: conductor.external-payload-storage.type
+              value: {{ .Values.conductor.externalPayloadStorage.type }}
+            - name: conductor.indexing.enabled
+              value: {{ .Values.conductor.indexing.enabled | quote }}
+            - name: conductor.elasticsearch.url
+              value: {{ .Values.conductor.indexing.elasticsearch.url }}
+            - name: conductor.elasticsearch.indexName
+              value: {{ .Values.conductor.indexing.elasticsearch.indexName }}
+            - name: conductor.elasticsearch.version
+              value: {{ .Values.conductor.indexing.elasticsearch.version }}
+            - name: conductor.elasticsearch.clusterHealthColor
+              value: {{ .Values.conductor.indexing.elasticsearch.clusterHealthColor }}
+            - name: conductor.metrics-prometheus.enabled
+              value: {{ .Values.conductor.metricsPrometheus.enabled | quote }}
+            - name: loadSample
+              value: {{ .Values.conductor.loadSample | quote }}
+            - name: management.endpoints.web.exposure.include
+              value: "prometheus"
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
           imagePullPolicy: Always
           name: conductor-oss
