@@ -1,0 +1,14 @@
+apiVersion: v1
+entries:
+  conductor-oss:
+  - apiVersion: v2
+    appVersion: 3.21.3
+    created: "2024-08-15T13:24:18.607391726Z"
+    description: Conductor OSS
+    digest: b92c651d0fa95cb1454d395e88929836ba64b13f164cc90235b4e644beb2ba71
+    name: conductor-oss
+    type: application
+    urls:
+    - https://github.com/Bacon-Factory/conductor-oss-helm-charts/releases/download/conductor-oss-1.0.0/conductor-oss-1.0.0.tgz
+    version: 1.0.0
+generated: "2024-08-15T13:24:18.60739913Z"
