@@ -27,21 +27,21 @@ spec:
           - name: spring.datasource.url
             value: {{ .Values.spring.datasource.url | quote }}
           - name: conductor.db.type
-            value: {{ .Values.conductor.db.type }}
+            value: {{ .Values.conductor.db.type | quote }}
           - name: conductor.queue.type
-            value: {{ .Values.conductor.queue.type }}
+            value: {{ .Values.conductor.queue.type | quote }}
           - name: conductor.external-payload-storage.type
-            value: {{ .Values.conductor.externalPayloadStorage.type }}
+            value: {{ .Values.conductor.externalPayloadStorage.type | quote }}
           - name: conductor.indexing.enabled
             value: {{ .Values.conductor.indexing.enabled | quote }}
           - name: conductor.elasticsearch.url
-            value: {{ .Values.conductor.indexing.elasticsearch.url }}
+            value: {{ .Values.conductor.indexing.elasticsearch.url | quote }}
           - name: conductor.elasticsearch.indexName
-            value: {{ .Values.conductor.indexing.elasticsearch.indexName }}
+            value: {{ .Values.conductor.indexing.elasticsearch.indexName | quote }}
           - name: conductor.elasticsearch.version
-            value: {{ .Values.conductor.indexing.elasticsearch.version }}
+            value: {{ .Values.conductor.indexing.elasticsearch.version | quote }}
           - name: conductor.elasticsearch.clusterHealthColor
-            value: {{ .Values.conductor.indexing.elasticsearch.clusterHealthColor }}
+            value: {{ .Values.conductor.indexing.elasticsearch.clusterHealthColor | quote }}
           - name: conductor.metrics-prometheus.enabled
             value: {{ .Values.conductor.metricsPrometheus.enabled | quote }}
           - name: loadSample
