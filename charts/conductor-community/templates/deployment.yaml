@@ -18,6 +18,9 @@ spec:
       labels:
         {{- include "conductor-oss.selectorLabels" . | nindent 8 }}
     spec:
+      {{- if .Values.nodeName }}
+      nodeName: {{ .Values.nodeName | quote }}
+      {{- end }}
       containers:
         - env:
           - name: spring.datasource.password
